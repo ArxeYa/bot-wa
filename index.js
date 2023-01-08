@@ -60,7 +60,7 @@ client.on('message', async msg => {
 
 // stiker
 client.on('message', async (message) => {
-    if (message.type == "image" && message.body == "#stiker") {
+    if (message.body == "#stiker") {
         client.sendMessage(message.from, "*[⏳]* Loading..");
         try {
             const media = await message.downloadMedia();
